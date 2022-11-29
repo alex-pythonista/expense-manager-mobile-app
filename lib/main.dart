@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:intl/intl.dart';
 import './transaction.dart';
 
 void main() => runApp(EMApp());
@@ -47,8 +47,8 @@ class HomePage extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: const <Widget>[
-          SizedBox(
+        children: <Widget>[
+          const SizedBox(
             width: double.infinity,
             child: Card(
               color: Colors.blue,
@@ -56,10 +56,56 @@ class HomePage extends StatelessWidget {
               child: Text("Chart"),
             ),
           ),
-          Card(
-            color: Colors.red,
-            elevation: 5,
-            child: Text("List of transaction"),
+          Column(
+            children: transactions.map((tx) {
+              return Card(
+                child: Row(
+                  children: [
+                    // ignore: avoid_unnecessary_containers
+                    Container(
+                      margin: const EdgeInsets.symmetric(
+                        vertical: 10,
+                        horizontal: 15,
+                      ),
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.purple,
+                          width: 2,
+                        ),
+                      ),
+                      padding: const EdgeInsets.all(10),
+                      child: Text(
+                        "A: ${tx.amount.toStringAsFixed(2)}",
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                          color: Colors.purple,
+                        ),
+                      ),
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          tx.title,
+                          style: const TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        Text(
+                          DateFormat('dd-MM-yyyy').format(tx.date),
+                          style: const TextStyle(
+                            fontSize: 15,
+                            color: Colors.grey,
+                          ),
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+              );
+            }).toList(),
           )
         ],
       ),
