@@ -45,7 +45,7 @@ class HomePage extends StatelessWidget {
         title: const Text("Your Expense Manager"),
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        // mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           const SizedBox(
@@ -54,6 +54,27 @@ class HomePage extends StatelessWidget {
               color: Colors.blue,
               elevation: 5,
               child: Text("Chart"),
+            ),
+          ),
+          Card(
+            elevation: 5,
+            child: Container(
+              padding: EdgeInsets.all(10),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: const [
+                  TextField(
+                    decoration: InputDecoration(labelText: "Title"),
+                  ),
+                  TextField(
+                    decoration: InputDecoration(labelText: "Amount"),
+                  ),
+                  ElevatedButton(
+                    onPressed: null,
+                    child: Text("Add Transaction"),
+                  )
+                ],
+              ),
             ),
           ),
           Column(
