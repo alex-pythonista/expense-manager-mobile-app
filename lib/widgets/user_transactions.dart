@@ -4,6 +4,7 @@ import '../models/transaction.dart';
 import './new_transaction.dart';
 import './transaction_list.dart';
 
+// UserTransaction widget
 class UserTransactions extends StatefulWidget {
   const UserTransactions({super.key});
 
@@ -12,6 +13,7 @@ class UserTransactions extends StatefulWidget {
 }
 
 class _UserTransactionsState extends State<UserTransactions> {
+  // prefilled Transaction Objects
   final List<Transaction> _userTransactions = [
     Transaction(
       id: "t1",
