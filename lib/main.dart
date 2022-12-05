@@ -17,6 +17,13 @@ class EMApp extends StatelessWidget {
         primarySwatch: Colors.green,
         // accentColor parameter has been depricated
         // accentColor: Colors.amber,
+        fontFamily: 'Consolas',
+        // appBarTheme: AppBarTheme(
+        //   // textTheme para is depricated
+        //   // textTheme: ThemeData.light().textTheme.copyWith(
+        //   //   titleMedium:
+        //   // )
+        // )
       ),
       home: HomePage(),
     );
