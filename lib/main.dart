@@ -13,6 +13,11 @@ class EMApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Your Expense Manager",
+      theme: ThemeData(
+        primarySwatch: Colors.green,
+        // accentColor parameter has been depricated
+        // accentColor: Colors.amber,
+      ),
       home: HomePage(),
     );
   }
