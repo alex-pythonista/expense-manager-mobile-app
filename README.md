@@ -1,6 +1,7 @@
 # expense_manager
 
-A new Flutter project.
+The purpose of this project is to learn about 
+flutter basics, widgets, how to set icons and build apk files.
 
 ## Getting Started
 
