@@ -3,9 +3,11 @@
 The purpose of this project is to learn about 
 flutter basics, widgets, how to set icons and build apk files.
 
-## Getting Started
+## Learning Outcomes
 
-This project is a starting point for a Flutter application.
+- Modals, OOP in dart, modular programming
+- how to build apk release
+- add app icon, and change app display name
 
 A few resources to get you started if this is your first Flutter project:
 
