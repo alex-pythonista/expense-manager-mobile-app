@@ -9,6 +9,7 @@ flutter basics, widgets, how to set icons and build apk files.
 - how to build apk release
 - add app icon, and change app display name
 - responsive and adaptive UI design
+- Stateless and Stateful Widget classes
 
 A few resources to get you started if this is your first Flutter project:
 
