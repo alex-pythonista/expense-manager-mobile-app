@@ -110,23 +110,24 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text("Show Chart"),
-                Switch(
-                  value: true,
-                  onChanged: (val) {
-                    setState(() {
-                      _showChart = val;
-                    });
-                  },
-                ),
-              ],
-            ),
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.center,
+            //   children: [
+            //     Text("Show Chart"),
+            //     Switch(
+            //       value: true,
+            //       onChanged: (val) {
+            //         setState(() {
+            //           _showChart = val;
+            //         });
+            //       },
+            //     ),
+            //   ],
+            // ),
             Container(
               height: (MediaQuery.of(context).size.height -
-                      appBar.preferredSize.height) *
+                      appBar.preferredSize.height -
+                      MediaQuery.of(context).padding.top) *
                   0.3,
               child: Chart(_recentTransactions),
             ),
